@@ -4,9 +4,9 @@ sudo apt-get install -y unzip curl
 
 echo Fetching Consul...
 
-pwd > /home/consule/whereami.txt
+pwd > /home/consul/whereami.txt
 
-pushd /tmp/
+cd /tmp/
 
 curl https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_amd64.zip -o consul.zip
 

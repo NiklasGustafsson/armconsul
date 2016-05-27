@@ -1,6 +1,5 @@
 {
-    "bootstrap": false,
-    "server": true,
+    "server": false,
     "datacenter": "uswest",   
     "data_dir": "/home/consul/consul",
     "encrypt": "pWcROE0W9sIITGWusIcNjA==",
