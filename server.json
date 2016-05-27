@@ -2,7 +2,7 @@
     "bootstrap": false,
     "server": true,
     "datacenter": "vagrant-1",   
-    "data_dir": "/home/vagrant/consul",
+    "data_dir": "/home/consul/consul",
     "encrypt": "pWcROE0W9sIITGWusIcNjA==",
     "log_level": "INFO",
     "enable_syslog": true,
