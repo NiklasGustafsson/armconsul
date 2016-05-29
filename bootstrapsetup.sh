@@ -6,18 +6,6 @@ echo Fetching Consul...
 
 pwd > /home/consul/whereami.txt
 
-cd /tmp/
-
-curl https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_amd64.zip -o consul.zip
-
-echo Installing Consul...
-unzip consul.zip
-
-sudo chmod +x consul
-sudo mv consul /usr/bin/consul
-
-popd
-
 sudo mkdir /etc/consul.d
 sudo chmod a+w /etc/consul.d
 
@@ -34,3 +22,12 @@ cat server.conf | sed s/AGENT/$1/ | sed s/CONSUL_ADDR/$2/g > /tmp/server.conf
 sudo cp server.json /etc/consul.d/server/config.json
 sudo cp /tmp/server.conf /etc/init/consul.conf
 
+cd /tmp/
+
+curl https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_amd64.zip -o consul.zip
+
+echo Installing Consul...
+unzip consul.zip
+
+sudo chmod +x consul
+sudo mv consul /usr/bin/consul
