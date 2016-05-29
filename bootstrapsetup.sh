@@ -9,6 +9,8 @@ pwd > /home/consul/whereami.txt
 sudo mkdir /etc/consul.d
 sudo chmod a+w /etc/consul.d
 
+sudo mkdir /etc/consul.d/bootstrap
+sudo chmod a+w /etc/consul.d/bootstrap
 sudo mkdir /etc/consul.d/server
 sudo chmod a+w /etc/consul.d/server
 sudo mkdir /etc/consul.d/client
@@ -19,6 +21,7 @@ chmod a+w /home/consul/consul
 
 cat server.conf | sed s/AGENT/$1/ | sed s/CONSUL_ADDR/$2/g > /tmp/server.conf
 
+sudo cp bootstrap.json /etc/consul.d/bootstrap/config.json
 sudo cp server.json /etc/consul.d/server/config.json
 sudo cp /tmp/server.conf /etc/init/consul.conf
 
