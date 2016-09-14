@@ -34,3 +34,5 @@ unzip consul.zip
 
 sudo chmod +x consul
 sudo mv consul /usr/bin/consul
+
+sudo start consul
